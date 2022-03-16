@@ -31,7 +31,17 @@ class UsersList extends Component {
               <h1>Users List</h1>
               {/* now map through all users and get individual user */}
               {
-                  users.map(user => <div key={user.id}>{user.firstname}</div>)
+                  users.map(user =>
+                      <div key={user.id}>
+                        <table>
+                              <td>
+                                  <tr>{ user.userId}</tr>
+                                  <tr>{user.firstname}</tr>
+                                  <tr>{user.lastname}</tr>
+                                  <tr>{user.jobtitle}</tr>
+                              </td>
+                        </table>
+                      </div>)
               }
           </div>
       );
