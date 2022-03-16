@@ -34,12 +34,24 @@ class UsersList extends Component {
                   users.map(user =>
                       <div key={user.id}>
                         <table>
+                              <thead>
+                                  <td>User Id</td>
+                                  <td>First Name</td>
+                                  <td>Last Name</td>
+                                  <td>Job Title</td>
+                              </thead>
                               <td>
-                                  <tr>{ user.userId}</tr>
-                                  <tr>{user.firstname}</tr>
-                                  <tr>{user.lastname}</tr>
-                                  <tr>{user.jobtitle}</tr>
+                                <tr>{user.userId}</tr>
                               </td>
+                              <td>
+                                <tr>{user.firstname}</tr>
+                              </td>
+                              <td>
+                                <tr>{user.lastname}</tr>
+                            </td>
+                              <td>
+                                <tr>{user.jobtitle}</tr>
+                            </td>  
                         </table>
                       </div>)
               }
