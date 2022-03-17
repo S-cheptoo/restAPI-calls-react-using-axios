@@ -1,0 +1,21 @@
+.App {
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+    border-collapse: collapse;
+}
+thead,tbody, td, th, tr{
+    border: 1px solid black;
+}
+
+.Read {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
