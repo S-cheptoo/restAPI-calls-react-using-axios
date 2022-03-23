@@ -1,21 +1,25 @@
 import React, { useState} from 'react'
 import { Button, Form } from 'semantic-ui-react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Create() {
+    let navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
 
-    // print the values to the console
-    console.log(firstName);
-    console.log(lastName);
+    // // print the values to the console
+    // console.log(firstName);
+    // console.log(lastName);
 
     // create a function that sends the values to the api
     const SendToAPI = () => {
-        axios.post(`https://crudcrud.com/api/2685d304280042c8bae09cc3cbb3d3aa/users`, {
+        axios.post(`https://crudcrud.com/api/2685d304280042c8bae09cc3cbb3d3aa/works`, {
             firstName,
             lastName
-        });
+        }).then(() => {
+            navigate.push('/read')
+        })
     }
 
     return (
